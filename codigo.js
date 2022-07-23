@@ -964,3 +964,11 @@ card6.addEventListener("mouseover", (e)=>{
 
 const discordtable = document.querySelector(".wind")
 discordtable.remove()
+
+console.log(screen.height)
+
+let screenheight = screen.height
+
+if(screenheight == 768) {
+  document.body.style.zoom = "75%";
+}

@@ -53,7 +53,7 @@ homejs.addEventListener("click",(e)=>{
 
 });
 
-homejs.addEventListener("mouseover",(e)=>{
+homejs.addEventListener("mousemove",(e)=>{
     homejs.style.cursor = "pointer"
 });
 
@@ -64,7 +64,7 @@ roadmapjs.addEventListener("click",(e)=>{
 
 });
 
-roadmapjs.addEventListener("mouseover",(e)=>{
+roadmapjs.addEventListener("mousemove",(e)=>{
     roadmapjs.style.cursor = "pointer"
 });
 
@@ -74,7 +74,7 @@ twitterbut.addEventListener("click",(e)=>{
 
 });
 
-twitterbut.addEventListener("mouseover",(e)=>{
+twitterbut.addEventListener("mousemove",(e)=>{
     twitterbut.style.cursor = "pointer"
 });
 
@@ -83,7 +83,7 @@ instabut.addEventListener("click",(e)=>{
 
 });
 
-instabut.addEventListener("mouseover",(e)=>{
+instabut.addEventListener("mousemove",(e)=>{
     instabut.style.cursor = "pointer"
 });
 
@@ -92,7 +92,7 @@ discordbut.addEventListener("click",(e)=>{
 
 });
 
-discordbut.addEventListener("mouseover",(e)=>{
+discordbut.addEventListener("mousemove",(e)=>{
     discordbut.style.cursor = "pointer"
 });
 
@@ -101,7 +101,7 @@ logo.addEventListener("click",(e)=>{
 
 });
 
-logo.addEventListener("mouseover",(e)=>{
+logo.addEventListener("mousemove",(e)=>{
     logo.style.cursor = "pointer"
 });
 
@@ -110,7 +110,7 @@ logojs.addEventListener("click",(e)=>{
 
 });
 
-logojs.addEventListener("mouseover",(e)=>{
+logojs.addEventListener("mousemove",(e)=>{
     logojs.style.cursor = "pointer"
 });
 
@@ -454,6 +454,7 @@ const onCardClick1 = async (e) => {
   // append the close button after the expansion is done
   cardClone.appendChild(closeButton);
   cardClone.insertAdjacentHTML('afterbegin', content);
+
 };
 
 const onCardClick2 = async (e) => {
@@ -526,7 +527,6 @@ const onCardClick2 = async (e) => {
     // append the close button after the expansion is done
     cardClone.appendChild(closeButton);
     cardClone.insertAdjacentHTML('afterbegin', content);
-
 
 
 };
@@ -602,7 +602,6 @@ const onCardClick3 = async (e) => {
   // append the close button after the expansion is done
   cardClone.appendChild(closeButton);
   cardClone.insertAdjacentHTML('afterbegin', content);
-
 
 
 };
@@ -831,15 +830,13 @@ const onCardClick6 = async (e) => {
   cardClone.appendChild(closeButton);
   cardClone.insertAdjacentHTML('afterbegin', content);
 
-
-
 };
 
 
 
   const img1 = ()=> {
     const photo = document.createElement('img');
-    photo.setAttribute('src', 'a.png');
+    photo.setAttribute('src', 'community.png');
     const imgcontainer = document.querySelector("body > div.wrapper > div:nth-child(7) > div.card-content > div.rigth-container")
     imgcontainer.appendChild(photo); 
   }  
@@ -851,47 +848,48 @@ const onCardClick6 = async (e) => {
   }  
   const img3 = ()=> {
     const photo = document.createElement('img');
-    photo.setAttribute('src', 'a.png');
+    photo.setAttribute('src', 'workshop.png');
     const imgcontainer = document.querySelector("body > div.wrapper > div:nth-child(7) > div.card-content > div.rigth-container")
     imgcontainer.appendChild(photo); 
   }  
   const img4 = ()=> {
     const photo = document.createElement('img');
-    photo.setAttribute('src', 'a.png');
+    photo.setAttribute('src', 'vr-.png');
     const imgcontainer = document.querySelector("body > div.wrapper > div:nth-child(7) > div.card-content > div.rigth-container")
     imgcontainer.appendChild(photo); 
   }  
   const img5 = ()=> {
     const photo = document.createElement('img');
-    photo.setAttribute('src', 'a.png');
+    photo.setAttribute('src', 'megafono.png');
     const imgcontainer = document.querySelector("body > div.wrapper > div:nth-child(7) > div.card-content > div.rigth-container")
     imgcontainer.appendChild(photo); 
   }  
   const img6 = ()=> {
     const photo = document.createElement('img');
-    photo.setAttribute('src', 'a.png');
+    photo.setAttribute('src', '');
     const imgcontainer = document.querySelector("body > div.wrapper > div:nth-child(7) > div.card-content > div.rigth-container")
     imgcontainer.appendChild(photo); 
   }  
   
   
-  
     
-
-
 const concept1 = document.querySelector("body > div > div:nth-child(1)")
 concept1.addEventListener("click", (e)=>{
   onCardClick1(e)
   setTimeout(()=> {
     img1();
   }, 401)
+  
+
+  
 })
 const concept2 = document.querySelector("body > div.wrapper > div:nth-child(2)");
 concept2.addEventListener("click", (e)=>{
   onCardClick2(e)
   setTimeout(()=> {
     img2();
-  }, 401)
+  }, 601)
+
 })
 
 const concept3 = document.querySelector("body > div > div:nth-child(3)")
@@ -900,6 +898,7 @@ concept3.addEventListener("click", (e)=>{
     setTimeout(()=> {
       img3();
     }, 401)
+  
 })
 const concept4 = document.querySelector("body > div > div:nth-child(4)")
 concept4.addEventListener("click", (e)=>{
@@ -907,6 +906,7 @@ concept4.addEventListener("click", (e)=>{
     setTimeout(()=> {
       img4();
     }, 401)
+  
 })
 const concept5 = document.querySelector("body > div > div:nth-child(5)")
 concept5.addEventListener("click", (e)=>{
@@ -914,6 +914,8 @@ concept5.addEventListener("click", (e)=>{
     setTimeout(()=> {
       img5();
     }, 401)
+
+  
 })
 const concept6 = document.querySelector("body > div > div:nth-child(6)")
 concept6.addEventListener("click", (e)=>{
@@ -922,6 +924,7 @@ concept6.addEventListener("click", (e)=>{
       img6();
     }, 401)
 })
+
 
 // concept map otros
 
@@ -933,42 +936,117 @@ const card5 = document.querySelector("body > div.wrapper > div:nth-child(5)")
 const card6 = document.querySelector("body > div.wrapper > div:nth-child(6)")
 
 card1.addEventListener("mouseover", (e)=>{
-
+  document.querySelector("#photo1").style.opacity = "1";
+  document.querySelector("#photo1").style.transition = "all .2s";
 })
 
 card2.addEventListener("mouseover", (e)=>{
-  
+  document.querySelector("#photo2").style.opacity = "1";
+  document.querySelector("#photo2").style.transition = "all .2s";
 })
 
 card3.addEventListener("mouseover", (e)=>{
-  
-})
-
-card1.addEventListener("mouseover", (e)=>{
-  
+  document.querySelector("#photo3").style.opacity = "1";
+  document.querySelector("#photo3").style.transition = "all .2s";
 })
 
 card4.addEventListener("mouseover", (e)=>{
-  
+  document.querySelector("#photo4").style.opacity = "1";
+  document.querySelector("#photo4").style.transition = "all .2s";
 })
 card5.addEventListener("mouseover", (e)=>{
-  
+  document.querySelector("#photo5").style.opacity = "1";
+  document.querySelector("#photo5").style.transition = "all .2s";
 })
 
 card6.addEventListener("mouseover", (e)=>{
-  
+  document.querySelector("#photo6").style.opacity = "1";
+  document.querySelector("#photo6").style.transition = "all .2s";
 })
 
+
+card1.addEventListener("mouseout", (e)=>{
+  document.querySelector("#photo1").style.opacity = "0.5";
+})
+
+card2.addEventListener("mouseout", (e)=>{
+  document.querySelector("#photo2").style.opacity = "0.5";
+})
+
+card3.addEventListener("mouseout", (e)=>{
+  document.querySelector("#photo3").style.opacity = "0.5";
+})
+
+card4.addEventListener("mouseout", (e)=>{
+  document.querySelector("#photo4").style.opacity = "0.5";
+})
+card5.addEventListener("mouseout", (e)=>{
+  document.querySelector("#photo5").style.opacity = "0.5";
+})
+
+card6.addEventListener("mouseout", (e)=>{
+  document.querySelector("#photo6").style.opacity = "0.5";
+})
 
 // EXTRA
 
 const discordtable = document.querySelector(".wind")
 discordtable.remove()
 
-console.log(screen.height)
 
-let screenheight = screen.height
 
-if(screenheight == 768) {
-  document.body.style.zoom = "75%";
+const screenheight = window.innerHeight
+
+
+function numberInBetween1(startingNumber, endingNumber, givenNumber){
+
+  if(givenNumber > startingNumber && givenNumber < endingNumber)
+    document.body.style.zoom = "95%"
 }
+
+numberInBetween1(810,879,screenheight);
+
+function numberInBetween2(startingNumber, endingNumber, givenNumber){
+
+  if(givenNumber > startingNumber && givenNumber < endingNumber)
+    document.body.style.zoom = "90%"
+}
+
+numberInBetween2(759,809,screenheight);
+
+function numberInBetween3(startingNumber, endingNumber, givenNumber){
+
+  if(givenNumber > startingNumber && givenNumber < endingNumber)
+    document.body.style.zoom = "80%"
+}
+
+numberInBetween3(719,758,screenheight);
+
+
+function numberInBetween4(startingNumber, endingNumber, givenNumber){
+
+  if(givenNumber > startingNumber && givenNumber < endingNumber)
+    document.body.style.zoom = "80%"
+}
+
+numberInBetween4(700,757,screenheight);
+
+
+function numberInBetween5(startingNumber, endingNumber, givenNumber){
+
+  if(givenNumber > startingNumber && givenNumber < endingNumber)
+    document.body.style.zoom = "70%"
+}
+
+numberInBetween5(629,699,screenheight);
+
+
+function numberInBetween6(startingNumber, endingNumber, givenNumber){
+
+  if(givenNumber > startingNumber && givenNumber < endingNumber)
+    document.body.style.zoom = "65%"
+}
+
+numberInBetween6(500,628,screenheight);
+
+console.log(screenheight)

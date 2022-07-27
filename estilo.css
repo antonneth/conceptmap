@@ -639,9 +639,23 @@ a:hover {
     color: #FFF;
 }
 
-html::-webkit-scrollbar {
-    width: 0px;
-    background-color: #000;
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff9d;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;
 }
 
 .wind {
@@ -1008,10 +1022,6 @@ body > div.todo-mov > div > ul {
       
   }
 
-  .card-content::-webkit-scrollbar {
-    width: 0px;
-  }
-
 
   div.card {
     overflow-x: hidden;
@@ -1288,8 +1298,14 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
       ;
       grid-template-rows: repeat(auto-fill, 1fr);}
       #i2 > div.card-content > div.rigth-container > img {
-        width: 300px !important;
+      width: 300px !important;
       height: 300px !important;
+      
+      }
+      #i5 > div.card-content > div.rigth-container > img {
+        width: 300px !important;
+        height: 300px !important;
+        align-self: flex-end;
       }
       
     }
@@ -1312,12 +1328,14 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
       align-self: end;
 
     }
+    
 
-    body > div.wrapper > div:nth-child(7) > div.card-content > div {
-      justify-content: end;
-    }
+
   }
 
+  div.rigth-container {
+    justify-content: end;
+  }  
   @media screen and (max-width: 1470px) {
     #i2 > div.card-content > .card-content div {
       width: 600px;
@@ -1332,12 +1350,6 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
     }   
   }
   @media screen and (max-width: 1200px) {
-    #i2 > .card-content > .left-container > p {
-      font-size: 15px;
-    }
-    body > div.wrapper > #i2 > div.card-content > div > span {
-      font-size: 15px;
-    }
     .card-content div {
       width: 500px;
       height: 718px;
@@ -1349,29 +1361,24 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
   }
 
   @media screen and (max-width: 850px) {
-    #i2 > .card-content {
+   .card-content {
       display: block;
     }
-    #i2 > .card-content > .rigth-container {
+   .card-content > .rigth-container {
       height: 310px;
       padding: 0;
       display: flex;
       justify-content: center;
     }
 
-    #i2 > .card-content > .rigth-container > img {
+    .card-content > .rigth-container > img {
       margin-left: 70px;
     }
   }
 
   @media screen and (max-width: 590px) {
-    #i2 > .card-content > .left-container > p {
-      font-size: 13px;
-    }
-    body > div.wrapper > #i2 > div.card-content > div > span {
-      font-size: 13px;
-    }
-    #i2 > div.card-content > .card-content > .left-container {
+
+    div.card-content > .card-content > .left-container {
       width: 300px;
       height: 450px;
     }
@@ -1383,9 +1390,7 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
       width: 450px;
       height: 580px;
     }
-    #i2 > .card-content > .left-container > p {
-      font-size: 10px;
-    }
+
     body > div.wrapper > #i2 > div.card-content > div > span {
       font-size: 10px;
     }
@@ -1400,10 +1405,10 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
   }
   
   @media screen and (max-width: 492px) {
-    #i2 > div.card-content > div.left-container > p {
+   div.card-content > div.left-container > p {
       margin-left: 7px;
     }
-    #i2 > div.card-content > div.left-container > h2 {
+   div.card-content > div.left-container > h2 {
       margin-left: 7px;
   }
 }
@@ -1419,9 +1424,16 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
     width: 300px;
     height: 620px;
 }
-#i2 > div.card-content > div.left-container > h2 { 
+ div.card-content > div.left-container > h2 { 
   font-size: 30px;
 }
+#i1 div.card-content > div.left-container {
+  padding-bottom: 900px;
+}
+#i2 div.card-content > div.left-container {
+  padding-bottom: 1140px;
+}
+
 
 }
 

@@ -1050,3 +1050,13 @@ function numberInBetween6(startingNumber, endingNumber, givenNumber){
 numberInBetween6(500,628,screenheight);
 
 console.log(screenheight)
+
+const isMobile = function() {
+  const mactch = window.matchMedia("(pointer:coarse)");
+  return (mactch && mactch.matches);
+}
+
+if(isMobile() == true) {
+  const menudel = document.querySelector("body > nav > ul");
+  menudel.remove()
+}

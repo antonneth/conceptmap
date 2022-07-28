@@ -1448,3 +1448,7 @@ body > div.wrapper > div:nth-child(7) > div.card-content > p:nth-child(3) > span
   width: 700px;
   opacity: 0.5;
 }
+
+div.card-content {
+  overflow-x: hidden;
+}
